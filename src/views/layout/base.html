@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    nav ul li{
+        display: inline;
+        padding: 10px;
+    }
+    li a{
+        text-decoration: none;
+        }
+</style>
+<body>
+    <div class="">
+        <!-- header -->
+        <div>
+            <nav class="">
+             <ul>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/meetups/create">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/meetups">List</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+
+        <!-- main content -->
+        <div class="main">
+            {% block main%} {% endblock%}
+        </div>
+
+        <!-- footer -->
+        <div class="footer"></div>
+
+    </div>
+</body>
+</html>

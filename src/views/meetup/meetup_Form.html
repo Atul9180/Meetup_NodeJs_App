@@ -1,0 +1,63 @@
+{% extends '../layout/base.html' %}
+{% block main%}
+
+<style>
+   
+    label{
+        display: block;        
+    }
+    input , textarea{
+         width: 60%;   /*60% of div */
+         margin-bottom: 10px;
+    }
+    button{
+        color:aliceblue;
+        background-color: rgb(88, 88, 243);
+        height: 30px;
+        width: 150px;
+        padding:8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    button:hover{
+        background-color: rgb(8, 8, 161);
+    }
+</style>
+
+<div>
+    <h1>Meetup Form </h1>
+    <hr />
+</div>
+
+<div>
+    <form action="" method="post">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" placeholder="Enter title of Meetup" id="meetupTitle" name="title" required />
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" class="form-control" name="description" cols="30" rows="5" placeholder="enter description about Meetup"></textarea>
+        </div>
+        <div>
+            <label for="location">Location</label>
+            <input type="text" placeholder="Enter Location of Meetup" id="meetupLocation" name="location" required />
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" placeholder="Select Date of Meetup" id="meetupDate" name="date" required />
+        </div>
+        <div>
+            <label for="image">Image</label>
+            <input type="text" placeholder="Enter Image url of Meetup" id="meetupImage" name="image" required />
+        </div>
+        <div>
+            <button type="submit">Add Meetup</button>
+        </div>
+    </form>
+</div>
+    
+
+{% endblock %}

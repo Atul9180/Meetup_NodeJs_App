@@ -1,0 +1,32 @@
+{
+  "name": "meetup_nodejs_app",
+  "version": "1.0.0",
+  "description": "This is a basic NodeJS and Mongo Db based MeetUp App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npx nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atul9180/Meetup_NodeJs_App.git"
+  },
+  "keywords": [
+    "Meetup"
+  ],
+  "author": "Atul Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atul9180/Meetup_NodeJs_App/issues"
+  },
+  "homepage": "https://github.com/Atul9180/Meetup_NodeJs_App#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
