@@ -1,0 +1,37 @@
+    .form-block{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    label{
+        display: block;        
+    }
+    input , textarea{
+         width: 60%;   /*60% of div */
+         margin-bottom: 10px;
+    }
+    button{
+        color:aliceblue;
+        background-color: rgb(88, 88, 243);
+        height: 50px;
+        width: 155px;
+        padding:8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 40%;
+        margin-top: 5px;
+    }
+    button:hover{
+        background-color: rgb(8, 8, 161);
+    }
+    .message{
+        color:green;
+        background-color: rgb(171, 243, 171);
+        padding: 10px;
+        border: 1px solid green;
+    }
+    .er-message{
+        color:rgba(154, 8, 8, 0.943);
+        background-color: rgb(227, 124, 108);
+        padding: 10px;
+        border: 1px solid rgb(117, 3, 3);
+    }

@@ -1,6 +1,52 @@
 {% extends "../layout/base.html" %}
+
+<!-- Main block -->
 {% block main %}
 
-<h1>Meetups List Here</h1>
+<link rel="stylesheet" href="/css/meetup/list.css">
 
+<center><h1>Meetups List</h1></center>
+<hr />
+
+<div>
+    {% if allMeetups.length %}
+<table>
+    <thead>
+        <tr>
+            <th>S.no.</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for meetup in allMeetups %}
+        <tr {{meetup.id}}>
+            <td>{{loop.index}}</td>
+            <td><img class="meetup-image" src="{{meetup.image}}" alt="image"></td>
+            <td>{{meetup.title}}</td>
+            <td>{{meetup.description}}</td>
+            <td>{{meetup.location}}</td>
+            <td>{{meetup.date.toDateString()}}</td>
+            <td><form action="/meetups/delete/{{meetup.id}}" method="post">
+                <button class="delete-btn" type="submit">Delete</button>
+            </form>
+                <a href="/meetups/{{meetup.id}}" class="detail-btn">Show more..</a>
+        </td>
+        </tr>
+        {% endfor%}
+    </tbody>
+</table>
+{% else %}
+<div class="no-meetup">
+    <h2>No Meetup Found......</h2>
+ </div>
+
+{% endif%}
+</div>
+    
+    {{meetup}}
 {% endblock%}

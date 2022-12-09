@@ -1,0 +1,11 @@
+.meetup-img{
+    height:350px;
+    width: 550px;
+    margin:13px;
+}
+.meetup-box{
+    text-align: center;
+    margin:auto;
+    margin-top:0px;
+    padding:10px;
+}

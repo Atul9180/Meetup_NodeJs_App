@@ -1,37 +1,22 @@
 {% extends '../layout/base.html' %}
+
 {% block main%}
 
-<style>
-   
-    label{
-        display: block;        
-    }
-    input , textarea{
-         width: 60%;   /*60% of div */
-         margin-bottom: 10px;
-    }
-    button{
-        color:aliceblue;
-        background-color: rgb(88, 88, 243);
-        height: 30px;
-        width: 150px;
-        padding:8px;
-        border: none;
-        cursor: pointer;
-        border-radius: 50%;
-        margin-top: 5px;
-    }
-    button:hover{
-        background-color: rgb(8, 8, 161);
-    }
-</style>
+<link rel="stylesheet" href="/css/meetup/form.css">
 
-<div>
+<div class="form-block">
     <h1>Meetup Form </h1>
     <hr />
-</div>
 
-<div>
+    <!-- Success message -->
+{% if message %}
+    <div class="message">{{message}}</div>
+{% endif %}
+    <!-- Error message -->
+{% if error %}
+    <div class="er-message">{{error}}</div>
+{% endif %}
+
     <form action="" method="post">
         <div>
             <label for="title">Title</label>
@@ -39,7 +24,7 @@
         </div>
         <div>
             <label for="description">Description</label>
-            <textarea id="description" class="form-control" name="description" cols="30" rows="5" placeholder="enter description about Meetup"></textarea>
+            <textarea id="description"  name="description" cols="30" rows="5" placeholder="enter description about Meetup"></textarea>
         </div>
         <div>
             <label for="location">Location</label>

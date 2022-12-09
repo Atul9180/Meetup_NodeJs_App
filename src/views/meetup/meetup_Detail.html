@@ -2,6 +2,17 @@
 
 {% block main %}
 
-<h1>hi this is meetup detail page</h1>
+<link rel="stylesheet" href="/css/meetup/detail.css">
+
+<center><h1>Meetup Details</h1></center>
+<hr style="margin-bottom:15px;" />
+
+<div class="meetup-box">
+    <h1>{{meetupId.title}}</h1>
+    <img class="meetup-img" src="{{meetupId.image}}" alt="image" >
+    <h2>Location: {{meetupId.location}}</h2>
+    <h3>Date: {{meetupId.date.toDateString()}}</h3>
+    <p>{{meetupId.description}}</p>
+</div>
 
 {% endblock%}

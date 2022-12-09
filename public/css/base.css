@@ -1,0 +1,8 @@
+    nav ul li{
+        display: inline;
+        padding: 10px;
+        display:inline-flex;
+    }
+    li a{
+        text-decoration: none;
+        }

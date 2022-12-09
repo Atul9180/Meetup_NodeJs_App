@@ -5,13 +5,14 @@ const app=express();
 const PORT= 3000;
 const swig= require('swig');
 
-
 //only for dev mode swig config. Not for Production..
-swig.setDefaults({ cache:false })
-app.use(express.urlencoded({extended:true}))        //middleware to read data from form
+swig.setDefaults({ cache:false });
+app.use(express.urlencoded({extended:true}));        //middleware to read data from form
 //tell app object about template engine use for html and to render it on response.render request
-app.set('view engine','html')
-app.set("views",__dirname+"/views")     //tell where your html files(say views) are;
+app.set('view engine','html');
+// importing static css files
+app.use(express.static("public"));
+app.set("views",__dirname+"/views");     //tell where your html files(say views) are;
 app.engine("html",swig.renderFile);
 
 //calling connection function
